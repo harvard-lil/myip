@@ -19,3 +19,12 @@ like
 git add dokku dokku@dokku.<your domain>:myip
 git push dokku develop
 ```
+
+The application can respond with plain text or JSON:
+
+```
+$ curl -4 https://myip.<your domain>/
+1.2.3.4
+$ curl -4 -H 'Content-type: application/json' https://myip.<your domain>/
+{"ip":"1.2.3.4"}
+```
